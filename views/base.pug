@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title iEducate
+    block scripts 
+    block style 
+
+  body
+    nav.navbar.background.h-nav-resp
+      ui.nav-list.v-class-resp
+        div.logo
+           img(src="static/img/logo.webp" alt="logo")
+        li #[a(href="/") Home]
+        li #[a(href="/about") About]
+        li #[a(href="#services") Services]
+        li #[a(href="#contact") Contact Us]
+
+      div.rightNav.v-class-resp
+        <input type="search" name="search" id="search" >
+        button(class="btn btn-sm")
+           | search
+
+      div.burger
+        div.line
+        div.line
+        div.line
+
+
+    block content
+    footer.background
+      p.text-footer
+       | Copyright &copy; 2025 iEducate.com - All rights reserved

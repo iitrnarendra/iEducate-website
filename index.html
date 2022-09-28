@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iEducate - Transforming Online Education</title>
+    <!-- <link rel="stylesheet" href="static/css/style.css"/>
+    <link rel="stylesheet" href="static/css/responsive.css"/> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: #f5eded;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        cursor: pointer;
+      }
+
+      .nav-list {
+        width: 50%;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo img {
+        margin: 8px;
+        width: 35px;
+        border: 3px solid white;
+        border-radius: 30px;
+      }
+      .nav-list li {
+        list-style: none;
+        padding: 0px 20px;
+      }
+      .nav-list li a {
+        text-decoration: none;
+        color: white;
+      }
+      .nav-list li a:hover {
+        color: gray;
+      }
+
+      .rightNav {
+        padding: 0px 20px;
+        width: 50%;
+        text-align: right;
+      }
+      .btn-sm {
+        padding: 6px 10px;
+        vertical-align: middle;
+      }
+      #search {
+        padding: 7px 25px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 11px;
+      }
+      .background {
+        background: rgb(75, 72, 72) url(static/img/bg.jpg);
+        background-size: cover;
+        background-blend-mode: darken;
+      }
+
+      /* FIRST SECTION */
+      .firstSection {
+        height: 100vh;
+      }
+      .box-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 56%;
+        margin: 0px 137px;
+        padding: 220px 200px;
+        height: 0%;
+      }
+
+      .firstHalf {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+      }
+      .text-big {
+        font-size: 35px;
+      }
+      .text-small {
+        font-size: 15px;
+      }
+      .btn {
+        font-family: "Ubuntu", sans-serif;
+        padding: 6px 20px;
+        margin: 8px 3px;
+        border: 2px solid white;
+        border-radius: 8px;
+        font-size: 13px;
+        background: none;
+        color: white;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: gray;
+      }
+
+      .secondHalf {
+        width: 25%;
+      }
+      .secondHalf img {
+        width: 90%;
+        border: 4px solid white;
+        border-radius: 120px;
+        display: block;
+        margin: auto;
+      }
+
+      /* SECTION */
+      .section {
+        background-color: #f5eded;
+        font-family: "Ubuntu", sans-serif;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        /* height: 400px; */
+        max-width: 80%;
+        margin: auto;
+      }
+      .section-left {
+        flex-direction: row-reverse;
+      }
+
+      .paras {
+        width: 119%;
+      }
+      .thumbnail img {
+        width: 85%;
+      }
+
+      .sectionTag {
+        padding: 10px 0;
+      }
+      .sectionSubTag {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .contact {
+        background-color: rgb(189, 202, 214);
+        height: 600px;
+      }
+
+      .text-center {
+        font-family: "Ubuntu", sans-serif;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .form {
+        max-width: 560px;
+        margin: 25px auto;
+      }
+
+      .form-input {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 5px 10px;
+        margin: 10px 0;
+        width: 100%;
+        border: 2px solid gray;
+        border-radius: 4px;
+        font-size: 15px;
+      }
+
+      .btn-dark {
+        color: black;
+        border: 2px solid gray;
+      }
+
+      .text-footer {
+        font-family: "Ubuntu", sans-serif;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+      }
+
+      .burger {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        right: 5px;
+        top: 10px;
+      }
+      .line {
+        width: 33px;
+        background-color: white;
+        height: 4px;
+        margin: 5px 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar background h-nav-resp">
+      <ui class="nav-list v-class-resp">
+        <div class="logo">
+          <img src="static/img/logo.webp" alt="logo" />
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ui>
+      <div class="rightNav v-class-resp">
+        <input type="search" name="search" id="search" />
+        <button class="btn btn-sm">search</button>
+      </div>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+
+    <section class="background firstSection">
+      <div class="box-main">
+        <div class="firstHalf">
+          <p class="text-big">The Future of Education is here</p>
+          <p class="text-small">
+            In thois world of 7 billion people we need to educate all of them.
+            This is the future of an educated world and we are proud to say that
+            the Future of Education is here
+          </p>
+          <div class="buttons">
+            <button class="btn">Subscribe</button>
+            <button class="btn">Watch Video</button>
+          </div>
+        </div>
+        <div class="secondHalf">
+          <img src="static/img/logo.webp" alt="Laotop Image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="paras">
+        <p class="sectionTag text-big">The end of your search is here</p>
+        <p class="sectionSubTag text-small">
+          | Up until 1976, education policies and implementation were determined
+          | legally by each of India's constitutional states. The 42nd amendment
+          | to the constitution in 1976 made education a 'concurrent subject'. |
+          From this point on the central and state governments shared formal |
+          responsibility for funding and administration of education. In a |
+          country as large as India, now with 28 states and eight union |
+          territories, this means that the potential for variations between |
+          states in the policies, plans, programs and initiatives for elementary
+          | education is vast. Of those schools managed privately, one third are
+          | 'aided' and two thirds are 'unaided'. Enrolment in Grades 1-8 is |
+          shared between government and privately managed schools in the ratio |
+          73:27. However in rural areas this ratio is higher (80:20) and in |
+          urban areas much lower
+        </p>
+      </div>
+      <div class="thumbnail">
+        <img src="static/img/logo.webp" alt="Laptop image" class="imgFluid" />
+      </div>
+    </section>
+
+    <section class="section section-left">
+      <div class="paras">
+        <p class="sectionTag text-big">Transforming Education in India</p>
+        <p class="sectionSubTag text-small">
+          Poorly resourced public schools which suffer from high rates of
+          teacher absenteeism may have encouraged the rapid growth of private
+          (unaided) schooling in India, particularly in urban areas. Private
+          schools divide into two types: recognized and unrecognized schools.
+          Government 'recognition' is an official stamp of approval and for
+          this, a private school is required to fulfill a number of conditions,
+          though hardly any private schools that get 'recognition' actually
+          fulfill all the conditions of recognition. Indian schools are no less
+          than factories. The emergence of large numbers of unrecognized primary
+          schools suggests that schools and parents do not take government
+          recognition as a stamp of quality.
+        </p>
+      </div>
+      <div class="thumbnail">
+        <img src="static/img/logo.webp" alt="Laptop image" class="imgFluid" />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="paras">
+        <p class="sectionTag text-big">Lets Grow Togrther</p>
+        <p class="sectionSubTag text-small">
+          Early education in India commenced under the supervision of a guru or
+          prabhu. The education was delivered through Gurukula. The relationship
+          between Guru and Shishya was very important part of the education.
+          Takshasila (in modern-day Pakistan) is one of the example of ancient
+          higher learning institute in India from possibly 8th century BCE,
+          however, it is debatable whether it could be regarded a university or
+          not in modern sense, since teachers living there may not have had
+          official membership of particular colleges, and there did not seem to
+          have existed purpose-built lecture halls and residential quarters in a
+          Taxila, in contrast to the later Nalanda university in eastern India.
+          Nalanda was the oldest university-system of education in the world in
+          the modern sense of university. There all subjects were taught in
+          Ariano -Páli language.
+        </p>
+      </div>
+      <div class="thumbnail">
+        <img src="static/img/logo.webp" alt="Laptop image" class="imgFluid" />
+      </div>
+    </section>
+    <hr />
+
+    <section class="contact" id="contact">
+      <h1 class="text-center">Contact Us</h1>
+      <div class="form">
+        <input
+          class="form-input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Your name"
+        />
+        <input
+          class="form-input"
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Enter Your phone"
+        />
+        <input
+          class="form-input"
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter Your email"
+        />
+        <textarea
+          class="form-input"
+          name="text"
+          id="text"
+          cols="30"
+          rows="10"
+          placeholder="Elaborate your concerns"
+        ></textarea>
+        <button class="btn btn-dark">Submit</button>
+      </div>
+    </section>
+
+    <footer class="background">
+      <p class="text-footer">
+        Copyright &copy; 2025 iEducate.com - All rights reserved
+      </p>
+    </footer>
+
+    <script src="static/js/resp.js"></script>
+  </body>
+</html>

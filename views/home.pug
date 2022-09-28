@@ -1,0 +1,96 @@
+extends base.pug
+
+block scripts 
+  script(src='../static/js/resp.js')
+
+block style
+  style 
+      include ../static/css/style.css
+      include ../static/css/responsive.css
+
+block content
+    section.background.firstSection
+      div.box-main
+        div.firstHalf
+          p.text-big The Future of Education is here
+          p.text-small
+            | In thois world of 7 billion people we need to educate all of them.
+            | This is the future of an educated world and we are proud to say that
+            | the Future of Education is here
+          div.buttons
+            button(class="btn")
+               | Subscribe
+            button(class="btn")
+               | Watch Video
+        div.secondHalf
+          img(src="static/img/logo.webp" alt="Laotop Image")
+
+
+    section.section#services
+      div.paras
+        p.sectionTag.text-big The end of your search is here
+        p.sectionSubTag.text-small
+          | Up until 1976, education policies and implementation were determined
+          | legally by each of India's constitutional states. The 42nd amendment
+          | to the constitution in 1976 made education a 'concurrent subject'.
+          | From this point on the central and state governments shared formal
+          | responsibility for funding and administration of education. In a
+          | country as large as India, now with 28 states and eight union
+          | territories, this means that the potential for variations between
+          | states in the policies, plans, programs and initiatives for elementary
+          | education is vast. Of those schools managed privately, one third are
+          | 'aided' and two thirds are 'unaided'. Enrolment in Grades 1–8 is
+          | shared between government and privately managed schools in the ratio
+          | 73:27. However in rural areas this ratio is higher (80:20) and in
+          | urban areas much lower
+      div.thumbnail
+        img(src="static/img/logo.webp" alt="Laptop image" class="imgFluid")
+
+    section.section.section-left
+      div.paras
+        p.sectionTag.text-big Transforming Education in India
+        p.sectionSubTag.text-small
+          | Poorly resourced public schools which suffer from high rates of
+          | teacher absenteeism may have encouraged the rapid growth of private
+          | (unaided) schooling in India, particularly in urban areas. Private
+          | schools divide into two types: recognized and unrecognized schools.
+          | Government 'recognition' is an official stamp of approval and for
+          | this, a private school is required to fulfill a number of conditions,
+          | though hardly any private schools that get 'recognition' actually
+          | fulfill all the conditions of recognition. Indian schools are no less
+          | than factories. The emergence of large numbers of unrecognized primary
+          | schools suggests that schools and parents do not take government
+          | recognition as a stamp of quality.
+      div.thumbnail
+        img(src="static/img/logo.webp" alt="Laptop image" class="imgFluid")
+
+    section.section
+      div.paras
+        p.sectionTag.text-big Lets Grow Togrther
+        p.sectionSubTag.text-small
+          | Early education in India commenced under the supervision of a guru or
+          | prabhu. The education was delivered through Gurukula. The relationship
+          | between Guru and Shishya was very important part of the education.
+          | Takshasila (in modern-day Pakistan) is one of the example of ancient
+          | higher learning institute in India from possibly 8th century BCE,
+          | however, it is debatable whether it could be regarded a university or
+          | not in modern sense, since teachers living there may not have had
+          | official membership of particular colleges, and there did not seem to
+          | have existed purpose-built lecture halls and residential quarters in a
+          | Taxila, in contrast to the later Nalanda university in eastern India.
+          | Nalanda was the oldest university-system of education in the world in
+          | the modern sense of university. There all subjects were taught in
+          | Ariano -Páli language.
+      div.thumbnail
+        img(src="static/img/logo.webp" alt="Laptop image" class="imgFluid")
+    hr
+    
+    section.contact#contact
+      h1.text-center Contact Us
+      form(action="/", method="post", class="form") 
+        input(type="text", class="form-input", name="name", id="name", placeholder="Enter Your name")
+        input(type="phone", class="form-input", name="phone", id="phone", placeholder="Enter Your phone")
+        input(type="email", class="form-input", name="email", id="email", placeholder="Enter Your email")
+        textarea(class="form-input", name="text", id="text", cols="30", rows="10", placeholder="Elaborate your concerns")
+        button(class="btn btn-dark")
+           | Submit
